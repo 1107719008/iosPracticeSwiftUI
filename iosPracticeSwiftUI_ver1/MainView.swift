@@ -10,7 +10,10 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         
-        Text("add things")
+        Text("add things").foregroundColor(.blue).fontWeight(.bold)
+        
+        
+        
         
         
     }
