@@ -16,7 +16,69 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
 
+   
+    
     var body: some View {
+        
+        
+        VStack {
+            
+            //修改字型顏色
+            Text("排序")
+                .font(.title)
+                .fontWeight(.bold)
+            .foregroundColor(.blue)
+            
+            HStack{
+            Text("first")
+            Text("second")
+            Text("third")
+            }
+                
+            VStack{
+            Label("Lightning", systemImage: "bolt.fill")
+            Label("Photo", systemImage: "photo.fill")
+            Label("colored", systemImage: "books.vertical.fill")
+                .foregroundColor(.green)
+            }
+            .padding(.horizontal, 20.0)
+
+            TabView{
+                
+                Image("photo.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .tabItem {
+                        Label("Photo",systemImage: "photo.fill")
+                    }
+                
+                Image("thumb-jpg")
+                    .resizable()
+                    .scaledToFit()
+                    .tabItem {
+                        //Text("Person")
+                        Label("Person",systemImage: "person.fill")
+                    }
+                
+               
+                
+                Image("thumb-jpg")
+                    .resizable()
+                    .scaledToFit()
+                    .tabItem {
+                        Label("Setting",systemImage: "gearshape.fill")
+                    }
+                
+                
+                
+                
+            }
+            
+        }
+    
+        
+        
+        
         NavigationView {
             List {
                 ForEach(items) { item in
@@ -83,6 +145,6 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
     }
 }
