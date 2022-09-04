@@ -26,6 +26,14 @@ struct MainView: View {
             }
             
             .navigationTitle("the next page")
+            .toolbar{
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                
+                    Button("button"){}
+                    Button("button2"){}
+                }
+                }
+            
             .dynamicTypeSize(.large)
             
         }

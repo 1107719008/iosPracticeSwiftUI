@@ -45,9 +45,7 @@ struct ContentView: View {
 
             TabView{
                 
-                Image("photo.fill")
-                    .resizable()
-                    .scaledToFit()
+                InfoPage()
                     .tabItem {
                         Label("Photo",systemImage: "photo.fill")
                     }
@@ -62,7 +60,7 @@ struct ContentView: View {
                 
                
                 
-                Image("thumb-jpg")
+                Image("airdropcat")
                     .resizable()
                     .scaledToFit()
                     .tabItem {

@@ -9,12 +9,24 @@ import SwiftUI
 
 struct circleImg: View {
     var body: some View {
-        Image("thumb-jpg")
+        Image("airdropcat")
+        
+            //.resizable()
+            //.scaledToFit()
+        
+            //use offset to control the img place
+            .offset(y:80)
+        
+            //clip the photo
             .clipShape(Circle())
+            
+            //邊框
             .overlay {
                 Circle().stroke(.white, lineWidth: 3)
+                    
                 
             }
+            .frame(width: 250, height: 250)
             .shadow(radius: 6)
         
     }
