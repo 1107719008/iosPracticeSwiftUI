@@ -10,7 +10,6 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         NavigationView{
-            
             VStack {
                 Text("add things").foregroundColor(.gray).fontWeight(.bold)
                 Text("add 1").foregroundColor(.gray).fontWeight(.bold)
@@ -20,18 +19,15 @@ struct MainView: View {
                 NavigationLink{SettingView()}label: {
                     Text("next").foregroundColor(.red).padding(100).font(.system(size: 40))
                 }
-                
-                
-                
             }
-            
             .navigationTitle("the next page")
             .toolbar{
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                
-                    Button("button"){}
-                    Button("button2"){}
+                ToolbarItem(placement: .principal) {
+                    Button("btn"){}
                 }
+//                ToolbarItem(placement: .navigationBarTrailing){
+//                    Button("btn2"){}
+//                }
                 }
             
             .dynamicTypeSize(.large)
